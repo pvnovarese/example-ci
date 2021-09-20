@@ -1,9 +1,9 @@
-FROM golang:1.17-alpine as builder
+FROM golang:1.17-alpine as builder 
 
 RUN go install github.com/sigstore/cosign/cmd/cosign@main
 RUN go install github.com/google/go-containerregistry/cmd/crane@latest
 
-# —————
+# —————-
 
 FROM golang:1.17-alpine
 
